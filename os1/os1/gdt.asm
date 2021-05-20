@@ -28,7 +28,16 @@ gdtEnd:
 gdtDescriptor:
 	gdtSize:
 		dw gdtEnd - gdtBegin - 1
-		dd gdtNullDesc
+		dq gdtNullDesc
 
 codeSeg equ gdtCodeDesc - gdtBegin
 dataSeg equ gdtDataDesc - gdtBegin
+
+[bits 32]
+
+editGDT:
+	mov byte [gdtCodeDesc + 6], 10101111b
+	mov byte [gdtDataDesc + 6], 10101111b
+	ret
+
+[bits 16]
