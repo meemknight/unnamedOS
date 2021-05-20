@@ -2,3 +2,5 @@ books
 books/
 .vs
 .vs/
+*.bin
+*.flp
