@@ -20,8 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="asemble.bat" />
+    <None Include="asembleRun.bat" />
     <None Include="bochsrc.bxrc" />
-    <None Include="bootLoader.asm" />
+    <None Include="paging.asm" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

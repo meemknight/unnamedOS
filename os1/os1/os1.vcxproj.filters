@@ -15,11 +15,14 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bootLoader.asm">
-      <Filter>Source Files</Filter>
-    </None>
     <None Include="bochsrc.bxrc" />
     <None Include="asemble.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="asembleRun.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="paging.asm">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>

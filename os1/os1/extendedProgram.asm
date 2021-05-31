@@ -1,5 +1,3 @@
-[org 0x7e00]
-
 mov bx, successMessage
 call printString
 
@@ -62,10 +60,12 @@ startProtectedMode:
 	jmp codeSeg : start64
 
 [bits 64]
+[extern _start]
+
 start64:
 
 	call clearScreen
-
+	call _start
 	jmp $
 	
 
