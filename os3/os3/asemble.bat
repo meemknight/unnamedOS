@@ -1,0 +1,1 @@
+@nasm bootLoader/bootLoader.asm -f bin -o out/bootLoader.flp
