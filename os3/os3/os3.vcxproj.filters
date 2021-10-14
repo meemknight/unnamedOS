@@ -24,5 +24,14 @@
     <None Include="bootLoader\basicUtility.asm">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="bootLoader\loadDisk.asm">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="extendedMemory\extendedProgram.asm">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="bootLoader\gtdDescriptor.asm">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

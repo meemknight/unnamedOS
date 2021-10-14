@@ -142,6 +142,9 @@
     <None Include="asemble.bat" />
     <None Include="bootLoader\basicUtility.asm" />
     <None Include="bootLoader\bootLoader.asm" />
+    <None Include="bootLoader\gtdDescriptor.asm" />
+    <None Include="bootLoader\loadDisk.asm" />
+    <None Include="extendedMemory\extendedProgram.asm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

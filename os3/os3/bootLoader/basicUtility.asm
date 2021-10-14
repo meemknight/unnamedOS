@@ -3,36 +3,18 @@
 ;input bx
 printHex:
 	mov [HEX_OUT+2], word 0
-
 	mov dx, bx
+	mov cx, 4
 
-	mov bh, 0
-	mov bl, dl
-	and bl, [BOTTOM_MASK]
-	mov al, [bx + HEX_TABLE]
-	mov [HEX_OUT + 5], al
-	shr dx, 4
-
-	mov bh, 0
-	mov bl, dl
-	and bl, [BOTTOM_MASK]
-	mov al, [bx + HEX_TABLE]
-	mov [HEX_OUT + 4], al
-	shr dx, 4
-
-	mov bh, 0
-	mov bl, dl
-	and bl, [BOTTOM_MASK]
-	mov al, [bx + HEX_TABLE]
-	mov [HEX_OUT + 3], al
-	shr dx, 4
-
-	mov bh, 0
-	mov bl, dl
-	and bl, [BOTTOM_MASK]
-	mov al, [bx + HEX_TABLE]
-	mov [HEX_OUT + 2], al
-	shr dx, 4
+	printHexLoop1:
+		mov bh, 0
+		mov bl, dl
+		and bl, [BOTTOM_MASK]
+		mov al, [bx + HEX_TABLE]
+		mov bx, cx	
+		mov [bx + 1 + HEX_OUT], al
+		shr dx, 4
+	loop printHexLoop1	
 
 	mov bx, HEX_OUT
 	call printStr
